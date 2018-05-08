@@ -3,13 +3,11 @@
 
 FROM resin/%%RESIN_MACHINE_NAME%%-python
 
-#Get library to test DHT22
 
 
 # set work directory
 WORKDIR /usr/src/app
 COPY . ./
-git remote add resin chakhovskoi@git.resin.io:chakhovskoi/pythonbot.git
 #systemmd turned on
 
 ENV INITSYSTEM on
