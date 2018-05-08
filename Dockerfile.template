@@ -1,0 +1,17 @@
+# getting the python image from resin
+
+FROM resin/%%RESIN_MACHINE_NAME%%-python
+
+#Get library to test DHT22
+
+git clone https://github.com/adafruit/Adafruit_Python_DHT.git
+
+# set work directory
+WORKDIR /usr/src/app
+COPY . ./
+
+#systemmd turned on
+
+ENV INITSYSTEM on
+
+CMD ["python","src/main.py"]
